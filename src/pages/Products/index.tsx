@@ -84,7 +84,7 @@ function Products() {
             Ready to take control of your finances?
           </h3>
           <p className="text-lg lg:text-xl text-center text-white mt-2">
-            Whether you're managing personal finances or business operations, we
+            Whether you&apos;re managing personal finances or business operations, we
             have the tools you need.
           </p>
         </div>
