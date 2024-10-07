@@ -15,7 +15,13 @@ export function Footer() {
           
           {/* Company Information */}
           <div className="space-y-4">
-            <img src="/images/MainLogo.svg" alt="MoneyTree Logo" className="h-10 w-auto transform transition-transform duration-200 hover:scale-110 active:scale-95" />
+            <Image
+              src="/images/MainLogo.svg"
+              alt="MoneyTree Logo"
+              className="h-10 w-auto transform transition-transform duration-200 hover:scale-110 active:scale-95"
+              width={100}
+              height={40}
+            />
             <p className="text-gray-600 text-sm">
               MoneyTree is your go-to platform for managing personal finances, budgeting, and financial planning. Get expert tips and track your financial goals with ease.
             </p>

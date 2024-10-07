@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 import Image from "next/image";
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
@@ -15,7 +16,7 @@ export default function Home() {
     <>
       <Head>
         <title>MoneyTree - Grow Your Wealth The Modern Finance Platform.</title>
-        <link rel="icon" href="/images/Head.ico" />{" "}  
+        <link rel="icon" href="/images/Head.ico" />
       </Head>
       <div>
         <Navbar />
@@ -55,13 +56,13 @@ export default function Home() {
               how we’re making a difference.
             </p>
             <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4 mt-6">
-              <a
+              <Link
                 href="/Company"
                 className="flex items-center justify-center px-6 py-3 bg-custom-light-green text-black rounded-md hover:bg-custom-green hover:text-white transition duration-300 text-center"
               >
                 Meet the Team{" "}
                 <ArrowTopRightOnSquareIcon className="w-5 h-5 ml-2" />
-              </a>
+              </Link>
             </div>
           </div>
         </section>

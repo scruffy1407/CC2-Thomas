@@ -1,8 +1,40 @@
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { getAllEntries } from "@/utils/api";
 
+interface Asset {
+  sys: {
+    id: string;
+  };
+  fields: {
+    file: {
+      url: string;
+    };
+  };
+}
+
+interface Testimony {
+  fields: {
+    name: string;
+    description: string;
+    work: string;
+    image?: {
+      sys: {
+        id: string;
+      };
+    };
+  };
+}
+
+interface ResponseData {
+  items: Testimony[];
+  includes: {
+    Asset: Asset[];
+  };
+}
+
 export function Testimony() {
-  const [entry, setEntries] = useState<any>();
+  const [entry, setEntries] = useState<ResponseData | null>(null);
 
   async function fetchAllEntries() {
     try {
@@ -39,7 +71,7 @@ export function Testimony() {
         </h1>
         <p className="text-black text-normal mt-3 px-5 lg:px-0">
           MoneyTree is creating the future of business banking and
-          finances, and we'd love you to join us.
+          finances, and we&apos;d love you to join us.
         </p>
       </div>
 
@@ -50,32 +82,35 @@ export function Testimony() {
           style={{ height: "500px" }}
         >
           {entry &&
-            entry?.items?.map((testimony: any, key: number) => {
+            entry.items.map((testimony, key) => {
               const imageUrl = entry.includes.Asset.find(
-                (asset: any) =>
-                  asset.sys.id === testimony?.fields?.image?.sys.id
-              )?.fields?.file?.url;
+                (asset) => asset.sys.id === testimony.fields.image?.sys.id
+              )?.fields.file.url;
 
               return (
                 <div
                   key={key}
                   className="min-w-[300px] max-w-[300px] h-[450px] bg-custom-black rounded-2xl p-5 flex flex-col items-center space-y-5 shadow-md snap-center transform transition-transform duration-300 hover:scale-105"
                 >
-                  <img
-                    src={`https:${imageUrl}`}
-                    alt={testimony?.fields?.name}
-                    className="w-20 h-20 rounded-full object-cover"
-                  />
+                  {imageUrl && (
+                    <Image
+                      src={`https:${imageUrl}`}
+                      alt={testimony.fields.name}
+                      width={80}
+                      height={80}
+                      className="rounded-full object-cover"
+                    />
+                  )}
                   <p className="text-white text-center flex-grow">
-                    {testimony?.fields?.description}
+                    {testimony.fields.description}
                   </p>
 
                   <div className="mt-auto text-center">
                     <h2 className="text-white font-semibold text-lg">
-                      {testimony?.fields?.name}
+                      {testimony.fields.name}
                     </h2>
                     <h3 className="text-custom-light-green font-normal">
-                      {testimony?.fields?.work}
+                      {testimony.fields.work}
                     </h3>
                   </div>
                 </div>

@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Image from 'next/image';
 import HeroImage from '/public/images/Hero.webp';
 import { ArrowUpRightIcon } from '@heroicons/react/24/outline';
@@ -25,12 +26,12 @@ export function Hero() {
             Keep your personal & business accounts safely organized under one roof. Track, plan, and grow efficiently.
           </p>
           <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-            <a href="/Pricing" className="flex items-center justify-center px-6 py-3 bg-custom-light-green text-black rounded-md hover:bg-custom-green hover:text-white transition duration-300 text-center">
+            <link href="/Pricing" className="flex items-center justify-center px-6 py-3 bg-custom-light-green text-black rounded-md hover:bg-custom-green hover:text-white transition duration-300 text-center">
               Discover our offers <ArrowUpRightIcon className="w-5 h-5 ml-2" />
-            </a>
-            <a href="/Products" className="px-6 py-3 bg-white text-black border-green-500 rounded-md hover:bg-custom-green hover:text-white transition duration-300 text-center">
+            </link>
+            <link href="/Products" className="px-6 py-3 bg-white text-black border-green-500 rounded-md hover:bg-custom-green hover:text-white transition duration-300 text-center">
               Learn More
-            </a>
+            </link>
           </div>
         </div>
         

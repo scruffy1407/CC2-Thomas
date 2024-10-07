@@ -1,3 +1,5 @@
+import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
@@ -15,39 +17,72 @@ export function Navbar() {
         <div className="flex justify-between items-center h-16">
           {/* Logo and Title */}
           <div className="flex justify-center w-full z-30 md:justify-start max-md:pl-5">
-            <a href="/" className="flex items-center">
-              <img
+            <Link href="/" className="flex items-center">
+              <Image
                 src="/images/MainLogo.svg"
                 alt="MoneyTree Logo"
                 className="h-7 w-7 mr-2"
+                width={28}
+                height={28}
               />
               <span className="text-2xl font-extrabold">
                 <span className="text-green-600">Money</span>
                 <span className="text-black">Tree</span>
               </span>
-            </a>
+            </Link>
           </div>
 
           {/* Navbar Links for larger screens */}
           <div className="hidden md:flex justify-center w-full z-40">
             <div className="flex space-x-4">
-              <a href="/" className="text-green-600 font-extrabold px-3 py-2 rounded-md text-sm">Home</a>
-              <a href="/Products" className="text-black hover:text-green-600 px-3 py-2 rounded-md text-sm font-bold">Products</a>
-              <a href="/Pricing" className="text-black hover:text-green-600 px-3 py-2 rounded-md text-sm font-bold">Pricing</a>
+              <Link
+                href="/"
+                className="text-green-600 font-extrabold px-3 py-2 rounded-md text-sm"
+              >
+                Home
+              </Link>
+              <Link
+                href="/Products"
+                className="text-black hover:text-green-600 px-3 py-2 rounded-md text-sm font-bold"
+              >
+                Products
+              </Link>
+              <Link
+                href="/Pricing"
+                className="text-black hover:text-green-600 px-3 py-2 rounded-md text-sm font-bold"
+              >
+                Pricing
+              </Link>
 
               {/* Popover for About Us */}
               <Popover className="relative">
                 {({ open }) => (
                   <>
                     <PopoverButton
-                      className={`flex items-center gap-2 text-black px-3 py-2 rounded-md text-sm font-bold ${open ? 'text-green-600' : 'hover:text-green-600'}`}
+                      className={`flex items-center gap-2 text-black px-3 py-2 rounded-md text-sm font-bold ${
+                        open ? "text-green-600" : "hover:text-green-600"
+                      }`}
                     >
                       About
-                      <ChevronDownIcon className={`h-5 w-5 transition-transform duration-200 ${open ? 'rotate-180' : ''}`} />
+                      <ChevronDownIcon
+                        className={`h-5 w-5 transition-transform duration-200 ${
+                          open ? "rotate-180" : ""
+                        }`}
+                      />
                     </PopoverButton>
                     <PopoverPanel className="absolute right-0 z-50 mt-2 w-48 bg-white shadow-lg rounded-md ring-1 ring-black ring-opacity-5">
-                      <a href="/Company" className="block px-4 py-2 text-sm text-black hover:bg-green-600 hover:text-white">Company Overview</a>
-                      <a href="/Teams" className="block px-4 py-2 text-sm text-black hover:bg-green-600 hover:text-white">Team Member</a>
+                      <Link
+                        href="/Company"
+                        className="block px-4 py-2 text-sm text-black hover:bg-green-600 hover:text-white"
+                      >
+                        Company Overview
+                      </Link>
+                      <Link
+                        href="/Teams"
+                        className="block px-4 py-2 text-sm text-black hover:bg-green-600 hover:text-white"
+                      >
+                        Team Member
+                      </Link>
                     </PopoverPanel>
                   </>
                 )}
@@ -76,10 +111,30 @@ export function Navbar() {
       {isOpen && (
         <Fade cascade damping={0.1}>
           <div className="flex flex-col md:hidden px-2 pt-2 pb-3 space-y-1">
-            <a href="/" className="text-green-600 font-semibold block px-3 py-2 rounded-md text-base text-center">Home</a>
-            <a href="/Products" className="text-black hover:text-green-600 block px-3 py-2 rounded-md text-base font-medium text-center">Products</a>
-            <a href="/Pricing" className="text-black hover:text-green-600 block px-3 py-2 rounded-md text-base font-medium text-center">Pricing</a>
-            <a href="/Company" className="text-black hover:text-green-600 block px-3 py-2 rounded-md text-base font-medium text-center">About Us</a>
+            <Link
+              href="/"
+              className="text-green-600 font-semibold block px-3 py-2 rounded-md text-base text-center"
+            >
+              Home
+            </Link>
+            <Link
+              href="/Products"
+              className="text-black hover:text-green-600 block px-3 py-2 rounded-md text-base font-medium text-center"
+            >
+              Products
+            </Link>
+            <Link
+              href="/Pricing"
+              className="text-black hover:text-green-600 block px-3 py-2 rounded-md text-base font-medium text-center"
+            >
+              Pricing
+            </Link>
+            <Link
+              href="/Company"
+              className="text-black hover:text-green-600 block px-3 py-2 rounded-md text-base font-medium text-center"
+            >
+              About Us
+            </Link>
           </div>
         </Fade>
       )}
@@ -87,4 +142,4 @@ export function Navbar() {
   );
 }
 
-export default Navbar;  
+export default Navbar;
