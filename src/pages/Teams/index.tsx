@@ -71,8 +71,8 @@ function Teams() {
                 <span className="text-custom-light-green">Joining</span> Our Team?
               </h1>
               <p className="text-gray-300 text-sm mb-2">
-                We're always looking for passionate individuals to help us grow.
-                If you're interested in making a difference in personal finance,
+                We&apos;re always looking for passionate individuals to help us grow.
+                If you&apos;re interested in making a difference in personal finance,
                 email us to explore opportunities!
               </p>
               <p className="text-gray-300 text-sm">

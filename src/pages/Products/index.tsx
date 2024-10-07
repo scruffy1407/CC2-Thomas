@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 import { Navbar } from "../../components/Navbar";
 import { Footer } from "../../components/Footer";
 import { ProductCardPersonalFull } from "../../components/card/ProductCardFull";
@@ -64,7 +65,7 @@ function Products() {
               <p className="text-center text-gray-700 mb-6">
                 Our suite of personal finance tools is designed to help you
                 manage your money effectively, achieve your financial goals, and
-                gain insights into your spending habits. Whether you're tracking
+                gain insights into your spending habits. Whether you&apos;re tracking
                 expenses, setting savings goals, or investing for the future, we
                 have the right solutions for you.
               </p>
@@ -77,7 +78,7 @@ function Products() {
           </div>
         </section>
 
-        {/* Visual Break */}
+        {/* Visual Section */}
         <div className="w-full bg-custom-black py-16">
           <h3 className="text-2xl lg:text-3xl font-semibold text-center text-custom-light-green">
             Ready to take control of your finances?
@@ -105,7 +106,7 @@ function Products() {
                 Transform Your Business Finances
               </h2>
               <p className="text-center text-gray-200 mb-6">
-                Managing your business finances shouldn't be a chore. With our
+                Managing your business finances shouldn&apos;t be a chore. With our
                 suite of tools, you can easily track expenses, handle invoicing,
                 and gain insights into your financial health. Say goodbye to the
                 complexities of financial management.
@@ -129,19 +130,18 @@ function Products() {
               </h2>
               <div className="flex justify-center items-center w-full md:w-full md:justify-center">
                 <p className="text-gray-800 mb-6 text-center md:text-center md:w-3/4 sm:w-3/4">
-                  Whether you’re an individual or a business, our comprehensive
+                  Whether you&apos;re an individual or a business, our comprehensive
                   tools and solutions can help you succeed. Join MoneyTree now
                   and begin your financial journey.
                 </p>
               </div>
               <div className="flex flex-col items-center mt-6">
-                <a
-                  href="/Company"
-                  className="flex items-center justify-center px-6 py-3 bg-custom-light-green text-black rounded-md hover:bg-custom-green hover:text-white transition duration-300 text-center"
-                >
-                  Meet the Team{" "}
-                  <ArrowTopRightOnSquareIcon className="w-5 h-5 ml-2" />
-                </a>
+                <Link href="/Company">
+                  <div className="flex items-center justify-center px-6 py-3 bg-custom-light-green text-black rounded-md hover:bg-custom-green hover:text-white transition duration-300 text-center">
+                    Meet the Team{" "}
+                    <ArrowTopRightOnSquareIcon className="w-5 h-5 ml-2" />
+                  </div>
+                </Link>
               </div>
             </div>
             {/* Image Section */}

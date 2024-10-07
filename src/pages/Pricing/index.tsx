@@ -33,7 +33,7 @@ function Pricing() {
               <p className="text-black text-center">
                 At <span className="text-green-600">MoneyTree</span>, we empower
                 you to take control of your finances with flexible plans tailored
-                to your needs. Whether you're starting your financial journey or
+                to your needs. Whether you&apos;re starting your financial journey or
                 seeking advanced tools, we have the perfect plan for you. Explore
                 our options and choose your path to financial freedom!
               </p>
@@ -82,7 +82,7 @@ function Pricing() {
                       All Sprout Plan features + Multi-Account Support
                     </td>
                     <td className="py-4 px-4">
-                      All Bloom Plan features + Invoicing & Tax Report
+                      All Bloom Plan features + Invoicing &amp; Tax Report
                     </td>
                   </tr>
                   <tr>
@@ -103,7 +103,7 @@ function Pricing() {
                     <td className="py-4 px-4">Normal</td>
                     <td className="py-4 px-4">Basic</td>
                     <td className="py-4 px-4">Premium</td>
-                    <td className="py-4 px-4">Pro & Business</td>
+                    <td className="py-4 px-4">Pro &amp; Business</td>
                   </tr>
                   <tr>
                     <td className="py-4 px-4">Benefits</td>

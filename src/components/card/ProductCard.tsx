@@ -17,47 +17,46 @@ interface Product {
   textColor: string;
   bgColor: string;
   alt: string;
-
 }
 
 // ProductCardPersonal Component
 export const ProductCardPersonal: React.FC = () => {
   const personalProducts: Product[] = [
     {
-      src: ExpenseTracker,
-      alt: "Expense Tracker",
       title: "EXPENSE TRACKER",
       description: "Keep an eye on all your spending in one place.",
+      src: ExpenseTracker,
       details: "Track expenses daily, weekly, or monthly to manage your budget effectively.",
       textColor: "text-white",
       bgColor: "bg-black",
+      alt: "Expense Tracker",
     },
     {
-      src: PersonalGoalTracker,
-      alt: "Personal Goal Tracker",
       title: "PERSONAL GOAL TRACKER",
       description: "Set personal savings goals.",
+      src: PersonalGoalTracker,
       details: "Combine multiple accounts to separate budgets or isolate expenses.",
       textColor: "text-black",
       bgColor: "bg-white",
+      alt: "Personal Goal Tracker",
     },
     {
-      src: BudgetPlanner,
-      alt: "Investment Portfolio Manager",
       title: "INVESTMENT PORTFOLIO MANAGER",
       description: "Grow your savings.",
+      src: BudgetPlanner,
       details: "Get personalized suggestions based on your financial goals and risk appetite.",
       textColor: "text-black",
       bgColor: "bg-white",
+      alt: "Investment Portfolio Manager",
     },
     {
-      src: MultiAccountSupport,
-      alt: "Multi Account Support",
       title: "MULTI ACCOUNT SUPPORT",
       description: "Organize all your cards in one place.",
+      src: MultiAccountSupport,
       details: "From checking accounts to savings and even credit cards. Simplify how you view and control your money.",
       textColor: "text-white",
       bgColor: "bg-black",
+      alt: "Multi Account Support",
     },
   ];
 
@@ -74,18 +73,23 @@ export const ProductCardPersonal: React.FC = () => {
                   src={product.src}
                   alt={product.alt}
                   className="rounded-lg"
-                  layout="fill"
+                  fill
+                  style={{ objectFit: "cover" }}
                 />
               </div>
             </div>
             <div className="p-4 h-56 overflow-auto">
-              <h3 className={`text-xs font-semibold text-custom-light-green mb-2`}>
+              <h3
+                className={`text-xs font-semibold text-custom-light-green mb-2`}
+              >
                 {product.title}
               </h3>
               <p className={`text-xl font-normal ${product.textColor} mb-4`}>
                 {product.description}
               </p>
-              <p className={`${product.textColor} text-sm mb-6`}>{product.details}</p>
+              <p className={`${product.textColor} text-sm mb-6`}>
+                {product.details}
+              </p>
             </div>
           </div>
         </div>
@@ -98,40 +102,40 @@ export const ProductCardPersonal: React.FC = () => {
 export const ProductCardBusiness: React.FC = () => {
   const businessProducts: Product[] = [
     {
-      src: TaxInvoice,
-      alt: "Tax Tracking and Invoicing",
       title: "TAX TRACKING & INVOICING",
       description: "Simplify your business finances.",
+      src: TaxInvoice,
       details: "With built-in tax-tracking tools and professional invoicing. Stay compliant with less hassle.",
       textColor: "text-black",
       bgColor: "bg-white",
+      alt: "Tax Tracking and Invoicing",
     },
     {
-      src: WireMoney,
-      alt: "SWIFT Payment",
       title: "SWIFT PAYMENT",
       description: "Wire money in 20+ currencies.",
+      src: WireMoney,
       details: "Send and receive transfers hassle-free inside and beyond via SWIFT.",
       textColor: "text-white",
       bgColor: "bg-custom-dark-green",
+      alt: "SWIFT Payment",
     },
     {
-      src: AdvancedBudget,
-      alt: "Advanced Budget Planner",
       title: "ADVANCED BUDGET PLANNER",
       description: "Create custom budgets for each department or business project.",
+      src: AdvancedBudget,
       details: "Stay on top of your expenses and ensure you're meeting your financial targets.",
       textColor: "text-white",
       bgColor: "bg-custom-dark-green",
+      alt: "Advanced Budget Planner",
     },
     {
-      src: AnalyticsReport,
-      alt: "Analytics and Report",
       title: "ANALYTICS & REPORT",
       description: "Access detailed financial reports tailored for business owners.",
+      src: AnalyticsReport,
       details: "Gain insights into profit margins, expenses, and future projections.",
       textColor: "text-black",
       bgColor: "bg-white",
+      alt: "Analytics and Report",
     },
   ];
 
@@ -148,18 +152,23 @@ export const ProductCardBusiness: React.FC = () => {
                   src={product.src}
                   alt={product.alt}
                   className="rounded-lg"
-                  layout="fill"
+                  fill
+                  style={{ objectFit: "cover" }}
                 />
               </div>
             </div>
             <div className="p-4 h-56 overflow-auto">
-              <h3 className={`text-xs font-semibold text-custom-light-green mb-2`}>
+              <h3
+                className={`text-xs font-semibold text-custom-light-green mb-2`}
+              >
                 {product.title}
               </h3>
               <p className={`text-xl font-normal ${product.textColor} mb-4`}>
                 {product.description}
               </p>
-              <p className={`${product.textColor} text-sm mb-6`}>{product.details}</p>
+              <p className={`${product.textColor} text-sm mb-6`}>
+                {product.details}
+              </p>
             </div>
           </div>
         </div>

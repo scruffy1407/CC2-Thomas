@@ -26,12 +26,12 @@ export function Hero() {
             Keep your personal & business accounts safely organized under one roof. Track, plan, and grow efficiently.
           </p>
           <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-            <link href="/Pricing" className="flex items-center justify-center px-6 py-3 bg-custom-light-green text-black rounded-md hover:bg-custom-green hover:text-white transition duration-300 text-center">
+            <Link href="/Pricing" className="flex items-center justify-center px-6 py-3 bg-custom-light-green text-black rounded-md hover:bg-custom-green hover:text-white transition duration-300 text-center">
               Discover our offers <ArrowUpRightIcon className="w-5 h-5 ml-2" />
-            </link>
-            <link href="/Products" className="px-6 py-3 bg-white text-black border-green-500 rounded-md hover:bg-custom-green hover:text-white transition duration-300 text-center">
+            </Link>
+            <Link href="/Products" className="px-6 py-3 bg-white text-black border-green-500 rounded-md hover:bg-custom-green hover:text-white transition duration-300 text-center">
               Learn More
-            </link>
+            </Link>
           </div>
         </div>
         

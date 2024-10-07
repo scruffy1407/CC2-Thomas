@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import FacebookSocials from "/public/images/socials/Facebook.svg";
 import InstagramSocials from "/public/images/socials/Instagram.svg";
 import LinkedinSocials from "/public/images/socials/Linkedin.svg";
@@ -6,6 +7,7 @@ import TwitterSocials from "/public/images/socials/Twitter.svg";
 import YoutubeSocials from "/public/images/socials/Youtube.svg";
 import AndroidIcon from "/public/images/socials/Android.svg";
 import AppleIcon from "/public/images/socials/Apple.svg";
+
 
 export function Footer() {
   return (
@@ -32,16 +34,16 @@ export function Footer() {
             <h3 className="text-lg font-bold text-black">Quick Links</h3>
             <ul className="text-black text-sm space-y-2">
               <li>
-                <a href="/" className="hover:text-custom-green">Home</a>
+                <Link href="/" className="hover:text-custom-green">Home</Link>
               </li>
               <li>
-                <a href="/Products" className="hover:text-custom-green">Products</a>
+                <Link href="/Products" className="hover:text-custom-green">Products</Link>
               </li>
               <li>
-                <a href="/Pricing" className="hover:text-custom-green">Pricing</a>
+                <Link href="/Pricing" className="hover:text-custom-green">Pricing</Link>
               </li>
               <li>
-                <a href="/Company" className="hover:text-custom-green">About</a>
+                <Link href="/Company" className="hover:text-custom-green">About</Link>
               </li>
             </ul>
           </div>
@@ -50,26 +52,26 @@ export function Footer() {
           <div className="space-y-2">
             <h3 className="text-lg font-bold text-black">Follow Us</h3>
             <div className="flex space-x-5">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-custom-green hover:scale-110 active:scale-95">
+              <Link href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-custom-green hover:scale-110 active:scale-95">
                 <Image src={FacebookSocials} alt="Facebook" width={24} height={24} />
-              </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:scale-110 active:scale-95">
+              </Link>
+              <Link href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:scale-110 active:scale-95">
                 <Image src={InstagramSocials} alt="Instagram" width={24} height={24} />
-              </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:scale-110 active:scale-95">
+              </Link>
+              <Link href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:scale-110 active:scale-95">
                 <Image src={TwitterSocials} alt="Twitter" width={24} height={24} />
-              </a>
-              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="hover:scale-110 active:scale-95">
+              </Link>
+              <Link href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="hover:scale-110 active:scale-95">
                 <Image src={YoutubeSocials} alt="Youtube" width={24} height={24} />
-              </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:scale-110 active:scale-95">
+              </Link>
+              <Link href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:scale-110 active:scale-95">
                 <Image src={LinkedinSocials} alt="Linkedin" width={24} height={24} />
-              </a>
+              </Link>
             </div>
 
             {/* Download Buttons */}
             <div className="flex flex-col md:flex-row justify-between items-center mt-4 pt-5 space-y-2 md:space-y-0 md:space-x-2">
-              <a
+              <Link
                 href="https://play.google.com/store"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -77,8 +79,8 @@ export function Footer() {
               >
                 <Image src={AndroidIcon} alt="Download for Android" width={16} height={16} className="mr-2" />
                 Android
-              </a>
-              <a
+              </Link>
+              <Link
                 href="https://www.apple.com/app-store/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -86,9 +88,8 @@ export function Footer() {
               >
                 <Image src={AppleIcon} alt="Download for Apple iOS" width={16} height={16} className="mr-2" />
                 iOS
-              </a>
+              </Link>
             </div>
-
           </div>
         </div>
 
