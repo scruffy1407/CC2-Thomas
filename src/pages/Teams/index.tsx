@@ -18,7 +18,7 @@ function Teams() {
         {/* Hoverable Section */}
         <div className="w-fit mb-5 mx-auto flex justify-center relative z-0 pt-2">
           <div className="w-full bg-custom-super-light-green p-2 rounded-full hover:shadow-lg transition-all duration-300 hover:scale-105">
-            <p className="text-sm lg:text-base text-gray-600 text-center">
+            <p className="text-sm lg:text-base text-black text-center">
               Get to know our dedicated team at MoneyTree 🙋
             </p>
           </div>
@@ -63,9 +63,19 @@ function Teams() {
 
         {/* Hiring Section */}
         <section className="bg-custom-black p-14">
-          <div className="flex flex-col lg:flex-row items-center">
+          <div className="flex flex-col lg:flex-row items-center justify-center">
+            {/* Image Section */}
+            <div className="flex-shrink-0 mb-6 lg:mb-0 lg:mr-8 flex items-center">
+              <Image
+                src={WomanAsset}
+                alt="Interested in Joining Our Team"
+                className="rounded-lg drop-shadow-xl w-full max-w-xs lg:max-w-md"
+                width={400}
+                height={300}
+              />
+            </div>
             {/* Text Section */}
-            <div className="max-w-md mx-auto text-center">
+            <div className="max-w-md text-center">
               <h1 className="text-3xl font-normal text-center text-white mb-4">
                 Interested in{" "}
                 <span className="text-custom-light-green">Joining</span> Our Team?
@@ -84,16 +94,6 @@ function Teams() {
                   careers@moneytree.com
                 </a>
               </p>
-            </div>
-            {/* Image Section */}
-            <div className="flex-shrink-0 mt-6">
-              <Image
-                src={WomanAsset}
-                alt="Interested in Joining Our Team"
-                className="rounded-lg drop-shadow-xl w-full max-w-xs lg:max-w-md"
-                width={400}
-                height={300}
-              />
             </div>
           </div>
         </section>

@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Image from "next/image";
 import Link from "next/link";
 import { Navbar } from "../../components/Navbar";
 import { Footer } from "../../components/Footer";
@@ -6,7 +7,6 @@ import { ProductCardPersonalFull } from "../../components/card/ProductCardFull";
 import { ProductCardBusinessFull } from "../../components/card/ProductCardFull";
 import { UserIcon, UserGroupIcon } from "@heroicons/react/24/outline";
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
-import Image from "next/image";
 import ManHero from "/public/images/assets/ManHero.webp";
 
 function Products() {

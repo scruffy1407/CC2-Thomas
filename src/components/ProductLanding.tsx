@@ -12,7 +12,7 @@ export function ProductLandingPage() {
         {/* Hoverable Section */}
         <div className="w-auto mb-5 px-4 lg:px-12 flex justify-center justify-items-center lg:justify-start">
           <div className="w-full bg-custom-super-light-green p-2 rounded-full hover:shadow-lg transition-all duration-300 hover:scale-105">
-            <p className="text-base font-normal lg:text-base text-gray-600">
+            <p className="text-base font-normal lg:text-base text-black">
               Features 🪄
             </p>
           </div>

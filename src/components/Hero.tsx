@@ -11,7 +11,7 @@ export function Hero() {
         {/* Hoverable Section */}
         <div className="w-fit mb-5 px-4 lg:px-12 flex justify-center lg:justify-start relative z-0">
           <div className="w-full bg-custom-super-light-green p-2 rounded-full hover:shadow-lg transition-all duration-300 hover:scale-105">
-            <p className="text-sm lg:text-base text-gray-600">
+            <p className="text-sm lg:text-base text-black">
               Whatever your size, sector, or stage of growth 🙌
             </p>
           </div>

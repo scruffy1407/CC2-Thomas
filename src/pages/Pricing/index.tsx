@@ -18,7 +18,7 @@ function Pricing() {
           {/* Hoverable Section */}
           <div className="w-fit mb-5 mx-auto flex justify-center relative z-0 pt-2">
             <div className="w-full bg-custom-super-light-green p-2 rounded-full hover:shadow-lg transition-all duration-300 hover:scale-105">
-              <p className="text-sm lg:text-base text-gray-600 text-center">
+              <p className="text-sm lg:text-base text-black text-center">
                 Your plan, your choice 🛒
               </p>
             </div>

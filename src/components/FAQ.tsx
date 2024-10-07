@@ -35,7 +35,7 @@ export function FAQ() {
       <div className="w-full flex justify-center items-center pt-8">
         <div className="w-auto px-4 lg:px-12">
           <div className="w-full bg-custom-super-light-green p-2 rounded-full hover:shadow-lg transition-all duration-300 hover:scale-105">
-            <p className="text-base font-normal lg:text-base text-gray-600 text-center">
+            <p className="text-base font-normal lg:text-base text-black text-center">
               Frequently Asked Questions 💬
             </p>
           </div>
