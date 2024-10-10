@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import { getAllEntries } from "@/utils/api";
 
+// Interface Asset
 interface Asset {
   sys: {
     id: string;
@@ -13,6 +14,7 @@ interface Asset {
   };
 }
 
+// Interface Testimony
 interface Testimony {
   fields: {
     name: string;
@@ -26,6 +28,7 @@ interface Testimony {
   };
 }
 
+// Interface Response Data
 interface ResponseData {
   items: Testimony[];
   includes: {
