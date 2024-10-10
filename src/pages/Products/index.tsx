@@ -138,7 +138,7 @@ function Products() {
               <div className="flex flex-col items-center mt-6">
                 <Link href="/Pricing">
                   <div className="flex items-center justify-center px-6 py-3 bg-custom-light-green text-black rounded-md hover:bg-custom-green hover:text-white transition duration-300 text-center">
-                    Discover Pricing  {" "}
+                    Discover Pricing {" "}
                     <ArrowTopRightOnSquareIcon className="w-5 h-5 ml-2" />
                   </div>
                 </Link>
